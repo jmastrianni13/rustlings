@@ -45,17 +45,20 @@ impl From<&str> for Person {
         if s.len() == 0 {
             return Person::default();
         } else {
-            let mut parts: Vec<String> = s.split(",").map(|s| s.to_string()).collect(); 
+            let mut parts: Vec<String> = s.split(",").map(|s| s.to_string()).collect();
             if parts.len() < 2 {
                 return Person::default();
             }
-            let name = parts.remove(0); 
+            let name = parts.remove(0);
             if name.len() == 0 {
                 return Person::default();
             } else {
                 let age = parts.remove(0).parse::<usize>();
                 match age {
-                    Ok(a) => Person { name, age: age.unwrap() },
+                    Ok(a) => Person {
+                        name,
+                        age: age.unwrap(),
+                    },
                     Err(a) => Person::default(),
                 }
             }
