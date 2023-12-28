@@ -13,10 +13,22 @@
 //
 // No hints this time ;)
 
-// I AM NOT DONE
-
 // Put your function here!
 // fn calculate_price_of_apples {
+fn calculate_price_of_apples(quantity: usize) -> usize {
+    let _0_40 = 0..=40;
+    let _41_pl = 41..;
+    let multiplier;
+    if _0_40.contains(&quantity) {
+        multiplier = 2;
+    } else if _41_pl.contains(&quantity) {
+        multiplier = 1;
+    } else {
+        panic!("expected usize");
+    }
+
+    return quantity * multiplier;
+}
 
 // Don't modify this function!
 #[test]
