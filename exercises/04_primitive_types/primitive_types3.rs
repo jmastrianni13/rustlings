@@ -6,7 +6,7 @@
 // for a hint.
 
 fn main() {
-    let a: Vec<i32> = (0..101).collect(); 
+    let a: Vec<i32> = (0..101).collect();
 
     if a.len() >= 100 {
         println!("Wow, that's a big array!");

@@ -27,9 +27,12 @@ pub fn divide(a: i32, b: i32) -> Result<i32, DivisionError> {
     match b {
         0 => Err(DivisionError::DivideByZero),
         _ => match a % b == 0 {
-            true => Ok(a/b),
-            false => Err(DivisionError::NotDivisible(NotDivisibleError { dividend: a, divisor: b })),
-        }
+            true => Ok(a / b),
+            false => Err(DivisionError::NotDivisible(NotDivisibleError {
+                dividend: a,
+                divisor: b,
+            })),
+        },
     }
 }
 
@@ -39,7 +42,8 @@ pub fn divide(a: i32, b: i32) -> Result<i32, DivisionError> {
 fn result_with_list() -> Result<Vec<i32>, DivisionError> {
     let numbers = vec![27, 297, 38502, 81];
     // https://users.rust-lang.org/t/need-help-in-understanding-iterator3-rs-in-rustlang-exercise/49864/4
-    let division_results: Result<Vec<i32>, DivisionError> = numbers.into_iter().map(|n| divide(n, 27)).collect();
+    let division_results: Result<Vec<i32>, DivisionError> =
+        numbers.into_iter().map(|n| divide(n, 27)).collect();
     return division_results;
 }
 

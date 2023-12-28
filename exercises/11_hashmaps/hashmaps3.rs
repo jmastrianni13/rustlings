@@ -51,7 +51,7 @@ fn build_scores_table(results: String) -> HashMap<String, Team> {
 
         new_stats = Team {
             goals_scored,
-            goals_conceded
+            goals_conceded,
         };
 
         scores.insert(team_1_name, new_stats);
@@ -68,7 +68,7 @@ fn build_scores_table(results: String) -> HashMap<String, Team> {
 
         new_stats = Team {
             goals_scored,
-            goals_conceded
+            goals_conceded,
         };
 
         scores.insert(team_2_name, new_stats);

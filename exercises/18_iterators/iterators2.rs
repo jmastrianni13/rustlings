@@ -11,7 +11,8 @@
 // "hello" -> "Hello"
 pub fn capitalize_first(input: &str) -> String {
     let mut c = input.chars();
-    match c.next() { // consumes first character of c
+    match c.next() {
+        // consumes first character of c
         None => String::new(),
         Some(first) => first.to_uppercase().to_string() + c.as_str(),
     }

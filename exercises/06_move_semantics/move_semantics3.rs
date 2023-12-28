@@ -15,7 +15,8 @@ fn main() {
     assert_eq!(vec1, vec![22, 44, 66, 88]);
 }
 
-fn fill_vec(mut vec: Vec<i32>) -> Vec<i32> { // take ownership of vec an promote it mutable 
+fn fill_vec(mut vec: Vec<i32>) -> Vec<i32> {
+    // take ownership of vec an promote it mutable
     vec.push(88);
 
     vec // move vec out of fill_vec

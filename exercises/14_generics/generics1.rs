@@ -10,4 +10,3 @@ fn main() {
     let mut shopping_list: Vec<_> = Vec::new();
     shopping_list.push("milk");
 }
-

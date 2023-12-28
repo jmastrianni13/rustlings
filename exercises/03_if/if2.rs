@@ -10,8 +10,9 @@ pub fn foo_if_fizz(fizzish: &str) -> &str {
         return "foo";
     } else if fizzish == "fuzz" {
         return "bar";
-    } else if fizzish == "literally anything" { // "literally anything" != literally anything, not
-                                                // a fan of this case
+    } else if fizzish == "literally anything" {
+        // "literally anything" != literally anything, not
+        // a fan of this case
         return "baz";
     } else {
         "1"
